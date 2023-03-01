@@ -35,7 +35,17 @@
                           <td class="text-center">{{$emp->employeeNumber}}</td>
                           <td class="text-center">{{$emp->department_id}}</td>
                           <td class="text-center">{{$emp->dob}}</td>
-                          <td class="text-center"><label class="badge badge-success">Completed</label></td>     
+                          @if($emp->status == 1)
+                          <td class="text-center"><label class="badge badge-success">Active</label></td>  
+                          @elseif($emp->status == 2)
+                          <td class="text-center"><label class="badge badge-danger">Terminated</label></td>
+                          @elseif($emp->status == 3)
+                          <td class="text-center"><label class="badge badge-danger">Resigned</label></td>   
+                          @elseif($emp->status == 4)
+                          <td class="text-center"><label class="badge badge-danger">Retired</label></td>   
+                          @else
+                          <td class="text-center"><label class="badge badge-danger">On Leave</label></td> 
+                          @endif     
                           <td class="text-center">
                           <div class="template-demo">
                           <div class="btn-group" role="group" aria-label="Basic example">                        

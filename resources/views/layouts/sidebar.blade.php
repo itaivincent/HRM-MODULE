@@ -17,10 +17,11 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/employees/create">Create employee</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/employees">Manage employees</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Parameters</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/employees/parameters">Parameters</a></li>
               </ul>
             </div>
           </li> 
+          
           
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#Assets" aria-expanded="false" aria-controls="ui-basic">
@@ -30,9 +31,9 @@
             </a>
             <div class="collapse" id="Assets">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add Asset</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Manage Assets</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Parameters</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/assets/create">Add Asset</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/assets">Manage Assets</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/assets/parameters">Parameters</a></li>
               </ul>
             </div>
           </li>

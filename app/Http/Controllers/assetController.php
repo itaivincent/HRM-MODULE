@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Assets;
+use App\Models\Departments;
+use App\User;
 
 class assetController extends Controller
 {
@@ -13,7 +16,7 @@ class assetController extends Controller
      */
     public function index()
     {
-        //
+        return view('assets.index');
     }
 
     /**
@@ -23,7 +26,7 @@ class assetController extends Controller
      */
     public function create()
     {
-        //
+        return view('assets.create');
     }
 
     /**
@@ -34,7 +37,7 @@ class assetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('');
     }
 
     /**
@@ -45,7 +48,9 @@ class assetController extends Controller
      */
     public function show($id)
     {
-        //
+        $asset = Assets::where('id',$id)->first();
+
+        return view('assets.show', compact('asset'));
     }
 
     /**
@@ -56,7 +61,9 @@ class assetController extends Controller
      */
     public function edit($id)
     {
-        //
+        $asset = Assets::where('id',$id)->first();
+
+        return view('assets.edit', compact('asset'));
     }
 
     /**

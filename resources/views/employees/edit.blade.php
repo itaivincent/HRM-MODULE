@@ -7,7 +7,7 @@
               <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">   
-                  <form class="form-sample" action="/growers/update/{{$grower->id}}" method="POST">
+                  <form method="post" class="form-sample" action="/employees/{{$employee->id}}"  />
                     @csrf
                     @method('put')
                   <h4 class="card-title">Change Employment Status</h4>
@@ -25,7 +25,7 @@
                   <div>
                 <button type="submit" class="btn btn-primary btn-sm">Save</button>
                     <button class="btn btn-lightbtn-sm">Cancel</button>
-                </div>
+                </div>  
                 </form>
                 </div>
                

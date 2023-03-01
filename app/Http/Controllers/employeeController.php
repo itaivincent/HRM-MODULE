@@ -96,7 +96,20 @@ class employeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $employeeStatusUpdate = Employees::where('id',$id)->update([
+
+            'status' => $request->status
+        ]);
+
+        if($employeeStatusUpdate){
+            return back();
+        }
+        else{
+            dd('fail!!');
+        }
+            
+        
     }
 
     /**
