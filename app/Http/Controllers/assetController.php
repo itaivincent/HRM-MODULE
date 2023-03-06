@@ -37,6 +37,8 @@ class assetController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->serialNum);
+        
         return view('');
     }
 

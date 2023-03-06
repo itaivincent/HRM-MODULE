@@ -19,9 +19,9 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Asset Name</label>
+                          <label class="col-sm-3 col-form-label">Serial #</label>
                           <div class="col-sm-9">
-                            <input type="text" name="name" class="form-control" required/>
+                            <input type="text" name="serialNum" class="js-example-basic-single w-100"required/>
                           </div>
                         </div>
                       </div>  
@@ -29,7 +29,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Asset Code</label>
                           <div class="col-sm-9">
-                            <input type="text" name="code"  class="form-control" required/>
+                            <input type="text" name="code" class="js-example-basic-single w-100" required/>
                           </div>
                         </div>
                       </div>
@@ -39,7 +39,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Asset Type</label>
                           <div class="col-sm-9">
-                            <select  name="type" class="form-control">
+                            <select  name="type" class="js-example-basic-single w-100">
                               <option value="Laptop">Laptop</option>
                               <option value="Desktop">Desktop</option>
                               <option value="Hard Drive">Hard Drive</option>
@@ -56,7 +56,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Date</label>
                           <div class="col-sm-9">
-                            <input type="date" name="date" class="form-control" placeholder="dd/mm/yyyy" required/>
+                            <input type="date" name="date" class="js-example-basic-single w-100" placeholder="dd/mm/yyyy" required/>
                           </div>
                         </div>
                       </div>
@@ -66,7 +66,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Description</label>
                           <div class="col-sm-9">
-                            <input type="text" name="desc" class="form-control"  required/>
+                            <input type="text" name="desc" class="js-example-basic-single w-100" required/>
                           </div>
                         </div>
                       </div>
@@ -75,13 +75,11 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Brand</label>
                           <div class="col-sm-9">
-                            <input type="text" name="brand" class="form-control"  required/>
+                            <input type="text" name="brand" class="js-example-basic-single w-100"  required/>
                           </div>
                         </div>
                       </div>                  
-                    </div>
-
-                             
+                    </div>                         
                     <button type="submit" class="btn btn-primary btn-lg">Save</button>
                     <button class="btn btn-lightbtn-lg">Cancel</button>
                   </form>
