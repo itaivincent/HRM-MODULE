@@ -38,8 +38,23 @@ class assetController extends Controller
     public function store(Request $request)
     {
         dd($request->serialNum);
-        
-        return view('');
+        $user = Employees::create([
+
+            'name' =>  $request->serialNum,
+            'assetCode' =>  $request->code,
+            'type' =>  $request->type,
+            'dateAdded' =>  $request->date,
+            'description' =>  $request->desc,
+            'brand' => $request->brand,
+            'condition' => $request->condition,
+            'status' => 1,
+        ]);
+
+        if($user){
+            dd("done!!");
+        }
+        dd("not done!!");
+     
     }
 
     /**

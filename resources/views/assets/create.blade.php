@@ -64,9 +64,18 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Description</label>
+                          <label class="col-sm-3 col-form-label">Condition</label>
                           <div class="col-sm-9">
-                            <input type="text" name="desc" class="js-example-basic-single w-100" required/>
+                          <select  name="condition" class="js-example-basic-single w-100">
+                              <option value="Laptop">Laptop</option>
+                              <option value="Desktop">Desktop</option>
+                              <option value="Hard Drive">Hard Drive</option>
+                              <option value="Monitor">Monitor</option>
+                              <option value="CPU">CPU</option>
+                              <option value="PowerPack">PowerPack</option>
+                              <option value="Mouse">Mouse</option>
+                              <option value="Other">Other</option>
+                            </select>
                           </div>
                         </div>
                       </div>
@@ -79,7 +88,18 @@
                           </div>
                         </div>
                       </div>                  
-                    </div>                         
+                    </div>   
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Description</label>
+                          <div class="col-sm-9">
+                            <input type="text" name="desc" class="js-example-basic-single w-100" required/>
+                          </div>
+                        </div>
+                      </div>
+                 
+                    </div>                       
                     <button type="submit" class="btn btn-primary btn-lg">Save</button>
                     <button class="btn btn-lightbtn-lg">Cancel</button>
                   </form>
