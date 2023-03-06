@@ -37,8 +37,8 @@ class assetController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->serialNum);
-        $user = Employees::create([
+
+        $asset = Assets::create([
 
             'name' =>  $request->serialNum,
             'assetCode' =>  $request->code,
@@ -50,10 +50,10 @@ class assetController extends Controller
             'status' => 1,
         ]);
 
-        if($user){
-            dd("done!!");
+        if($asset){
+            dd("success!!");
         }
-        dd("not done!!");
+        dd("failed!!");
      
     }
 
