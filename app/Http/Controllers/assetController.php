@@ -52,10 +52,7 @@ class assetController extends Controller
 
         if($asset){
 
-            dd("success!! done");
-
-            
-            
+            dd("success!! done");         
         }
         dd("failed!!");
      
