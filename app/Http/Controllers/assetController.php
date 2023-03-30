@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Assets;
+use App\Models\Employees;
 use App\Models\Departments;
 use App\User;
 
@@ -16,7 +17,9 @@ class assetController extends Controller
      */
     public function index()
     {
-        return view('assets.index');
+        $assets = Assets::all();
+
+        return view('assets.index', compact('assets'));
     }
 
     /**
@@ -79,7 +82,7 @@ class assetController extends Controller
      */
     public function edit($id)
     {
-        $asset = Assets::where('id',$id)->first();
+        $asset = Assets::where('id', $id)->first();
 
         return view('assets.edit', compact('asset'));
     }
@@ -93,7 +96,23 @@ class assetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $updateAsset = Assets::where('id', $id)->update([
+        
+            'name' =>  $request->name,
+            'type' =>  $request->type,
+            'brand' =>  $request->brand,
+            'assetCode' =>  $request->assetCode,
+            'condition' =>  $request->condition,
+            'description' =>  $request->description,
+
+        ]);
+
+        if($updateAsset){
+            dd('success!!');
+        }
+        else{
+            dd('error');
+        }
     }
 
     /**
@@ -105,5 +124,13 @@ class assetController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function assignments(){
+
+        $employees = Employees::all();
+        $assets = Assets::all();
+        return view('assets.assignments', compact('employees','assets'));
     }
 }

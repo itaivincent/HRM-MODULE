@@ -26,4 +26,5 @@ Route::resources([
 ]);
 
 
+Route::get('/assignments', 'assetController@assignments')->name('assignments');
 Route::get('/home', 'HomeController@index')->name('home');
