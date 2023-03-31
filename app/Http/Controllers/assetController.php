@@ -8,6 +8,7 @@ use App\Models\Employees;
 use App\Models\Departments;
 use App\User;
 use App\Models\EmpAssets;
+use Carbon\Carbon;
 
 class assetController extends Controller
 {
@@ -137,19 +138,21 @@ class assetController extends Controller
     }
 
 
-    public function assetAssignment(){
+    public function assetAssignment(Request $request){
 
-        dd($request->asset);
-
-        $updateAsset = Assets::where('id', $request->asset )->first();
-
+       
+        $getAsset = Assets::where('id', $request->asset )->first();
+       
         $assetassignment = EmpAssets::create([
-         
 
+            'employeeId' => $request->employee,       
+            'assetId' => $request->asset, 
+            'date' => Carbon::now(),
+            'condition' => $getAsset->condition,
 
         ]);
 
-        if($asset){
+        if($assetassignment){
 
             dd("success!! done");         
         }
