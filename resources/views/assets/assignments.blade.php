@@ -7,16 +7,16 @@
               <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">   
-                  <form method="post" class="form-sample" action=""  />
-                    @csrf
-                    @method('put')
+                  <form  method="post" class="form-sample" action="/assets/assetAssignment"  />
+                    @csrf               
                   <h4 class="card-title">Please select an employee </h4>
                   <div class="form-group">
                     <label><b>You can change the status of an employee on the dropdown below</b></label>
                     <hr></hr>
-                    <select class="js-example-basic-single w-100" name="status">
-                      <option value="1">Active</option> 
-                                                                  
+                    <select class="js-example-basic-single w-100" name="employee">
+                      @foreach($employees as $employee)
+                      <option value="{{$employee->id}}">{{$employee->name}} {{$employee->surname}} - {{$employee->employeeNumber}}</option> 
+                      @endforeach                                          
                     </select>
                   </div>
                   <div>
@@ -37,9 +37,10 @@
                   <div class="form-group">
                     <label><b>You can change the status of an employee on the dropdown below</b></label>
                     <hr></hr>
-                    <select class="js-example-basic-single w-100" name="status">
-                      <option value="1">Active</option> 
-                                                                 
+                    <select class="js-example-basic-single w-100" name="asset">
+                    @foreach($assets as $asset)
+                      <option value="{{$asset->id}}">{{$asset->name}} - {{$asset->assetCode}} - {{$asset->type}} </option> 
+                      @endforeach                                     
                     </select>
                   </div>
                   <div>

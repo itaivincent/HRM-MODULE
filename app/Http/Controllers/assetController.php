@@ -7,6 +7,7 @@ use App\Models\Assets;
 use App\Models\Employees;
 use App\Models\Departments;
 use App\User;
+use App\Models\EmpAssets;
 
 class assetController extends Controller
 {
@@ -131,6 +132,28 @@ class assetController extends Controller
 
         $employees = Employees::all();
         $assets = Assets::all();
+
         return view('assets.assignments', compact('employees','assets'));
+    }
+
+
+    public function assetAssignment(){
+
+        dd($request->asset);
+
+        $updateAsset = Assets::where('id', $request->asset )->first();
+
+        $assetassignment = EmpAssets::create([
+         
+
+
+        ]);
+
+        if($asset){
+
+            dd("success!! done");         
+        }
+        dd("failed!!");
+     
     }
 }
