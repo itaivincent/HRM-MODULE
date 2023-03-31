@@ -27,5 +27,6 @@ Route::resources([
 
 
 Route::get('/assignments', 'assetController@assignments')->name('assignments');
+Route::get('/manageAssignments', 'assetController@manageAssignments')->name('manageAssignments');
 Route::post('/assets/assetAssignment','assetController@assetAssignment')->name('assetAssignment');
 Route::get('/home', 'HomeController@index')->name('home');

@@ -159,4 +159,11 @@ class assetController extends Controller
         dd("failed!!");
      
     }
+
+
+    public function manageAssignments(){
+
+        
+        return view();
+    }
 }
