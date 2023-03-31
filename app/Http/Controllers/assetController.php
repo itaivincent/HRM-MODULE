@@ -163,7 +163,7 @@ class assetController extends Controller
 
     public function manageAssignments(){
 
-        
-        return view();
+       dd("dumping data.....");
+        return view('assets.manageAssignments');
     }
 }
