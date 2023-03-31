@@ -34,6 +34,7 @@
                 <li class="nav-item"> <a class="nav-link" href="/assets/create">Add Asset</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/assets">Manage Assets</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/assignments">Assignments</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/manageAssignments">Manage Assignments</a></li>
               </ul>
             </div>
           </li>
