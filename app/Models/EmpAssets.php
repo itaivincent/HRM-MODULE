@@ -8,8 +8,8 @@ class EmpAssets extends Model
 {
     protected $fillable = [
         
-        'employeeId',       
-        'assetId', 
+        'employee_id',       
+        'asset_id', 
         'date',
         'condition',
     ];

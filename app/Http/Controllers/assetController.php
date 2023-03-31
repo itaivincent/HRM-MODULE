@@ -145,8 +145,8 @@ class assetController extends Controller
        
         $assetassignment = EmpAssets::create([
 
-            'employeeId' => $request->employee,       
-            'assetId' => $request->asset, 
+            'employee_id' => $request->employee,       
+            'asset_id' => $request->asset, 
             'date' => Carbon::now(),
             'condition' => $getAsset->condition,
 
