@@ -7,7 +7,7 @@
               <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">   
-                  <form  method="post" class="form-sample" action="/assets/assetAssignment"  />
+                  <form  class="form-sample" action="/assets/assetAssignment"  method="POST"/>
                     @csrf               
                   <h4 class="card-title">Please select an employee </h4>
                   <div class="form-group">
