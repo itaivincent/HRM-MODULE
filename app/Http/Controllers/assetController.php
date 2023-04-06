@@ -156,7 +156,7 @@ class assetController extends Controller
 
             dd("success!! done");         
         }
-        
+
         dd("failed!!");
      
     }
@@ -165,6 +165,7 @@ class assetController extends Controller
     public function manageAssignments(){
 
        dd("dumping data.....");
+       
         return view('assets.manageAssignments');
     }
 }
